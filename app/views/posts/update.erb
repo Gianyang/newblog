@@ -1,0 +1,17 @@
+
+<h1> List of Articles </h1>
+
+<h3>Title</h3>
+
+  <% @title.each do |title| %>
+     <br><a href='<%= "/posts/#{title.id}" %>'><%= "#{title.title}" %> </a><br>
+
+
+  <% end %><br>
+
+
+<br><form action="/home" method="post">
+<button value="submit">Back to Home</button>
+</form>
+
+<a href="/posts/">Delete Post</a> <a href="/posts/edit">Edit Post</a>
